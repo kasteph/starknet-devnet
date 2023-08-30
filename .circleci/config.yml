@@ -12,6 +12,7 @@ jobs:
       - run:
           name: Buildx ls
           command: |
+            lmao --nothing
             docker run --rm --privileged tonistiigi/binfmt --install arm64
             docker --version
             docker buildx ls
