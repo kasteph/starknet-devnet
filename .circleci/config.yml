@@ -4,7 +4,7 @@ jobs:
   test-job:
     machine:
       image: ubuntu-2004:202111-02
-    resource_class: arm.medium
+    resource_class: medium
     steps:
       - checkout
       # - setup_remote_docker:
