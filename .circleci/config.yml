@@ -2,16 +2,17 @@ version: 2.1
 
 jobs:
   test-job:
-    docker:
-      - image: cimg/base:stable
-    resource_class: medium
+    machine:
+      image: ubuntu-2004:202111-02
+    resource_class: arm.medium
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 20.10.23
+      # - setup_remote_docker:
+      #     version: 20.10.23
       - run:
           name: Buildx ls
           command: |
+            docker --version
             docker buildx ls
 
 workflows:
