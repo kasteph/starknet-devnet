@@ -12,6 +12,7 @@ jobs:
       - run:
           name: Buildx ls
           command: |
+            export DOCKER_CLI_EXPERIMENTAL=enabled
             docker buildx ls
 
 workflows:
